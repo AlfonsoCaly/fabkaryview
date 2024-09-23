@@ -1,0 +1,26 @@
+<!-- templates/favkaryapp/email_confirmation.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Contacting Us!</title>
+</head>
+<body>
+    <h2 style="font-family: Snell Roundhand, monospace; color: #333; font-size: 2.5rem">Thank you for contacting us!</h2>
+    <p style="font-family: oswaldFont, sans-serif; color: black;">
+        We have received your message and will get back to you shortly.
+    </p>
+    <p style="font-family: oswaldFont, sans-serif; color: grey;">
+        Here is a copy of your message: <br>
+        <strong>Subject:</strong> {{ subject }}<br>
+        <strong>Message:</strong> {{ message }}<br>
+    </p>
+    <img src="cid:logo_image" alt="Logo" style="width: 300px; margin-top: 40px;">
+    <p style="font-family: Snell Roundhand, sans-serif; color: #333; font-size 1.2rem">
+        Best regards,<br>
+        The Fab Kary View Team
+    </p>
+</body>
+</html>

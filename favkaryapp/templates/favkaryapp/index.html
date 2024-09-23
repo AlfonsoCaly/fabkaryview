@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fab Kary View</title>
+    <link rel="icon" type="image/png" href="{% static 'img/logo.png' %}">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+    <style>
+        body {
+          background-color: #F7F7F7;
+        }
+         .welcome-section {
+           height: 80vh;
+           background: url('{% static "img/comercial1.png" %}') no-repeat center center/cover;
+           color: white;
+           display: flex;
+           justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+         }
+        .welcome-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+        }
+        .biography-section {
+            padding: 20px 0;
+            margin-bottom: 0;
+        }
+        .biography-content {
+            text-align: justify;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+        }
+        .favKaryFont {
+            font-family: 'Snell Roundhand', monospace;
+            font-size: 5rem;
+        }
+        .favKaryFont2 {
+            font-family: 'Snell Roundhand', monospace;
+        }
+        .titleFont {
+            font-family: 'Oswald', monospace;
+            font-weight: 1 ;
+        }
+        .aboutMeFont {
+            font-family: 'Oswald', monospace;
+            padding: 20px;
+            font-weight: 1;
+            margin-top: 0;
+        }
+        .subtitleFont {
+          font-family: 'Oswald', monospace;
+          letter-spacing: 6px;
+          font-size: large;
+          font-weight: 1;
+        }
+        .oswaldFont {
+          font-family: "Oswald", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 100;
+          font-style: normal;
+        }
+        .dancing-script {
+          font-family: "Dancing Script", cursive;
+          font-optical-sizing: auto;
+          font-weight: 100;
+          font-style: normal;
+        }
+        .navbar-brand-center {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .instagram-photo {
+          width: 100px;
+          height: 100px;
+          object-fit: cover;
+        }
+        .dancing-script {
+          font-family: "Dancing Script", cursive;
+          font-optical-sizing: auto;
+          font-weight: 400;
+          font-style: normal;
+        }
+        .bg-biography {
+          background-color: #eeeee4;
+          padding: 20px 0;
+        }
+        .text-right {
+           text-align: right;
+        }
+        .enfoqueFont {
+            font-family: "Dancing Script", cursive;
+        }
+        .footerFont {
+          font-family: "Oswald", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 100;
+          font-style: normal;
+        }
+        .footer {
+          background-color: #333;
+          color: #fff;
+          padding: 20px 0;
+        }
+        .with-border-right {
+          border-right: 1px solid white;
+          padding-right: 15px;
+        }
+        .with-border-left {
+          border-left: 1px solid white;
+          padding-left: 15px;
+        }
+
+        .zoom-effect {
+            transition: transform 0.3s ease-in-out; /* Suaviza la transición */
+        }
+        
+        .zoom-effect:hover {
+            transform: scale(1.05); /* Agranda la imagen en un 5% */
+        }
+
+        .img-shadow {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease;
+        }
+
+        .img-shadow:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+
+<body>
+   <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+        <!-- Logo centrado -->
+        <a class="navbar-brand navbar-brand-center favKaryFont2" href="{% url 'index' %}">Fab Kary View</a>
+
+        <!-- Botón colapsable para dispositivos móviles -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Contenido del navbar -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Opciones de navegación a la izquierda -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link oswaldFont" href="{% url 'index' %}#home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link oswaldFont" href="{% url 'index' %}#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link oswaldFont" href="{% url 'portfolio' %}">Portfolio</a>
+                </li>
+            </ul>
+
+            <!-- Opciones de navegación a la derecha -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link oswaldFont" href="{% url 'index' %}#biography">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link oswaldFont" href="https://www.instagram.com/fabkaryview_/">Instagram</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link oswaldFont" href="{% url 'contact' %}">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        {% block content %}
+               <!-- Welcome Section -->
+            <section id="home" class="welcome-section">
+                <div class="container">
+                    <h1 class="favKaryFont">Fab Kary View</h1>
+                    <h4 class="subtitleFont">Capturing your emotions, your story, your memories.</h4>
+                    <div class="mt-4">
+                    <a href="{% url 'portfolio' %}" class="btn btn-dark mr-3">Portfolio</a>
+                    <a href="{% url 'contact' %}" class="btn btn-dark">Contact</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services" class="py-5">
+                <div class="container">
+                    <hr>
+                    <p class="oswaldFont text-center">British Columbia photo shoots</p>
+                    <h2 class="text-center titleFont">PHOTOGRAPHY SERVICES</h2>
+                    <br>
+                    <hr>
+                    <div class="row">
+                        <!-- Servicio 1: Weddings -->
+                        <div class="col-md-4 text-center">
+                            <h4 class="dancing-script">Weddings</h4>
+                            <a href="{% url 'weddings' %}" class="btn btn-dark mt-3">Learn More</a>
+                            <hr>
+                            <div class="card shadow">
+                                <img src="{% static 'img/video44.gif' %}" class="card-img-top img-fluid zoom-effect" alt="Wedding Video">
+                            </div>
+                            <p></p>
+                            <hr>
+                            <p class="oswaldFont">Is your special day coming soon?<br> wedding photos will be unforgettable </p>
+                            <hr>
+                            <div class="card shadow">
+                                <img src="{% static 'img/boda5.png' %}" class="card-img-top img-fluid zoom-effect" alt="Wedding Photo">
+                            </div>
+                            <hr>
+                            <h4 class="dancing-script">Weddings</h4>
+                            <a href="{% url 'weddings' %}" class="btn btn-dark mt-3">Learn More</a>
+                            <hr>
+                        </div>
+
+                        <!-- Servicio 2: Lifestyle -->
+                        <div class="col-md-4 text-center">
+                            <h4 class="dancing-script">Personal - Lifestyle</h4>
+                            <a href="{% url 'lifestyle' %}" class="btn btn-dark mt-3">Learn More</a>
+                            <hr>
+                            <div class="card shadow">
+                                <img src="{% static 'img/retrato14.png' %}" class="card-img-top img-fluid zoom-effect" alt="Lifestyle Photography">
+                            </div>
+                            <p></p>
+                            <hr>
+                            <p class="oswaldFont">Photos for business, personal branding<br>and solo portraits</p>
+                            <hr>
+                            <div class="card shadow">
+                                <img src="{% static 'img/video3.gif' %}" class="card-img-top img-fluid zoom-effect" alt="Lifestyle Video">
+                            </div>
+                            <p></p>
+                            <p class="favKaryFont2"> Lifestyle </p>
+                            <hr>
+                            <h4 class="dancing-script">Personal - Lifestyle</h4>
+                            <a href="{% url 'lifestyle' %}" class="btn btn-dark mt-3">Learn More</a>
+                            <hr>
+                        </div>
+
+                        <!-- Servicio 3: Family -->
+                        <div class="col-md-4 text-center">
+                            <h4 class="dancing-script">Family</h4>
+                            <a href="{% url 'family' %}" class="btn btn-dark mt-3">Learn More</a>
+                            <hr>
+                            <div class="card shadow">
+                                <img src="{% static 'img/video55.gif' %}" class="card-img-top img-fluid zoom-effect" alt="Family Photography">
+                            </div>
+                            <hr>
+                            <p class="oswaldFont">Capture memorable moments <br>with your family</p>
+                            <hr>
+                            <div class="card shadow">
+                                <img src="{% static 'img/familia1.png' %}" class="card-img-top img-fluid zoom-effect" alt="Family Photography">
+                            </div>
+                            <hr>
+                            <h4 class="dancing-script">Family</h4>
+                            <a href="{% url 'family' %}" class="btn btn-dark mt-3">Learn More</a>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <hr>
+
+            <!-- Biography Section -->
+        <h2 class="text-center aboutMeFont">ABOUT ME</h2>
+        <section id="biography" class="biography-section bg-biography">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card shadow">
+                            <img src="{% static 'img/karen3.png' %}" alt="Biography Image" class="card-img-top">
+                            </div>
+                        </div>
+                        <div class="col-md-6 biography-content">
+                            <h2 class="favKaryFont2">Karen Fabiola</h2>
+                            <p>I started Fav Kary View in 2022. It wasn´t long before my passion for photography Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit rutrum eros, eget consectetur justo volutpat sed. Integer consectetur dui in quam condimentum, non dictum leo blandit.</p>
+                            <p>Fusce vulputate est ut nulla laoreet, eget gravida quam gravida. Nullam interdum metus nec ligula lobortis, et condimentum lorem facilisis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit rutrum eros, eget consectetur justo volutpat sed. Integer consectetur dui in quam condimentum, non dictum leo blandit.</p>
+                            <p>Fusce vulputate est ut nulla laoreet, eget gravida quam gravida. Nullam interdum metus nec ligula lobortis, et condimentum lorem facilisis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+                            <p>I started Fav Kary View in 2022. It wasn´t long before my passion for photography Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit rutrum eros, eget consectetur justo volutpat sed. Integer consectetur dui in quam condimentum, non dictum leo blandit.</p>
+                            <p>Fusce vulputate est ut nulla laoreet, eget gravida quam gravida. Nullam interdum metus nec ligula lobortis, et condimentum lorem facilisis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr>
+        {% endblock %}
+    </main>
+
+       <!-- Instagram Section -->
+    <section id="instagram" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="oswaldFont">Instagram</h2>
+                <p class="enfoqueFont">Check out my latest posts on Instagram!</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <a href="https://www.instagram.com/p/C54al0yPBpg/?img_index=1" target="_blank">
+                        <div class="card shadow">
+                            <img src="{% static 'img/retrato14.png' %}" class="img-fluid img-shadow zoom-effect" alt="Instagram Post 1">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <a href="https://www.instagram.com/p/C7afOM_Jdx9/?img_index=1" target="_blank">
+                        <div class="card shadow">
+                            <img src="{% static 'img/retrato8.png' %}" class="img-fluid img-shadow zoom-effect" alt="Instagram Post 2">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <a href="https://www.instagram.com/p/C61mjS5JRuX/?img_index=1" target="_blank">
+                        <div class="card shadow">
+                            <img src="{% static 'img/retrato26.png' %}" class="img-fluid img-shadow zoom-effect" alt="Instagram Post 3">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="https://www.instagram.com/fabkaryview_/" class="btn btn-dark">Follow me on Instagram</a>
+            </div>
+        </div>
+    </section>
+
+
+
+   <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="row footerFont">
+                <!-- Sección izquierda del footer -->
+                <div class="col-md-6 with-border-right">
+                    <h3> Contact </h3>
+                    <p>Fab Kary View</p>
+                    <p>Contact: <a href="tel:+1234567890" style="color: white;"> <i class="fab fa-whatsapp"></i> +123 456 7890</a></p>
+                    <p>Email: <a href="mailto:mail@fabkaryview.com" style="color: white;">mail@fabkaryview.com</a></p>
+                    <p>Social Media:</p>
+                    <p>
+                        <a href="#" target="_blank" style="color: white;">Facebook</a> |
+                        <a href="#" target="_blank" style="color: white;">Twitter</a> |
+                        <a href="#" target="_blank" style="color: white;">Pinterest</a>
+                    </p>
+                </div>
+                <!-- Sección derecha del footer -->
+                <div class="col-md-6 text-right with-border-left">
+                    <h3>Follow us:</h3>
+                    <p>
+                        <a href="https://www.instagram.com/fabkaryview_/" target="_blank" style="color: white;">Instagram</a> |
+                        <a href="https://www.instagram.com/fabkaryview_/" target="_blank" style="color: white;">YouTube</a> |
+                    </p>
+                    <h3>Around the site</h3>
+                    <p><a href="#services" style="color: white;">Services</a></p>
+                    <p><a href="{% url 'portfolio' %}" style="color: white;">Portfolio</a></p>
+                    <p><a href="#biography" style="color: white;">About me</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{% extends 'favkaryapp/index.html' %}
+{% load static %} 
+
+{% block title %}family - Fab Kary View{% endblock %}
+
+{% block content %}
+
+    <!-- Portfolio Section -->
+    <section id="weddings" class="py-5">
+        <div class="container">
+            <hr>
+            <h2 class="text-center enfoqueFont">-  Family  -</h2>
+            <p class="text-center esloganFont">Your family's story, beautifully told</p>
+            <hr>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="row">
+                        <!-- Añadir imágenes de bodas aquí -->
+                        <div class="col-md-3 mb-4">
+                            <img src="{% static "img/familia4.png"  %}" class="img-fluid img-shadow" alt="Boda1">
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <img src="{% static "img/familia3.png" %}" class="img-fluid img-shadow" alt="Boda3">
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <img src="{% static "img/familia2.png" %}" class="img-fluid img-shadow" alt="Boda4">
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <img src="{% static "img/familia1.png" %}" class="img-fluid img-shadow" alt="Boda5">
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <a href="{% url 'contact' %}" class="btn btn-dark my-2">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </section>
+
+{% endblock %}

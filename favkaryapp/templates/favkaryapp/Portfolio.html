@@ -1,0 +1,109 @@
+{% extends 'favkaryapp/index.html' %}
+{% load static %} 
+
+{% block title %}Portfolio - Fab Kary View{% endblock %}
+
+{% block content %}
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-5">
+        <div class="container">
+            <hr>
+            <h2 class="text-center oswaldFont">Portfolio</h2>
+            <hr>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h3 class="enfoqueFont">Lifestyle</h3>
+                    <a href="lifestyle.html" class="btn btn-dark my-2">Learn More</a>
+                    <hr>
+                    <div class="row">
+                        <!-- Añadir imágenes de estilo de vida aquí -->
+                        <div class="col-md-3 mb-4">
+                            <img src="{% static "img/video1.gif" %}" class="img-fluid img-shadow" alt="Lifestyle 1">
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <img src="{% static "img/video2.gif" %}" class="img-fluid img-shadow" alt="Lifestyle 2">
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <img src="{% static "img/video3.gif"  %}" class="img-fluid img-shadow" alt="Lifestyle 3">
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <img src="{% static "img/video55.gif"  %}" class="img-fluid img-shadow" alt="Lifestyle 4">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Añadir imágenes de estilo de vida aquí -->
+                        <div class="col-md-3 mb-4">
+                            <img src="{% static "img/retrato9.png"  %}" class="img-fluid img-shadow" alt="Lifestyle 5">
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <img src="{% static "img/retrato10.png"  %}" class="img-fluid img-shadow" alt="Lifestyle 6">
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <img src="{% static "img/retrato13.png"  %}" class="img-fluid img-shadow" alt="Lifestyle 7">
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <img src="{% static "img/retrato14.png"  %}" class="img-fluid img-shadow" alt="Lifestyle 8">
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <a href="lifestyle.html" class="btn btn-dark">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h3 class="enfoqueFont">Weddings</h3>
+                    <a href="weddings.html" class="btn btn-dark my-2">Learn More</a>
+                    <hr>
+                    <div class="row">
+                        <!-- Añadir imágenes de bodas aquí -->
+                        <div class="col-md-3 mb-4">
+                            <img src="{% static "img/boda7.png"  %}" class="img-fluid img-shadow" alt="Wedding 1">
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <img src="{% static "img/boda5.png"  %}" class="img-fluid img-shadow" alt="Wedding 2">
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <img src="{% static "img/boda1.png"  %}" class="img-fluid img-shadow" alt="Wedding 3">
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <img src="{% static "img/boda2.png"  %}" class="img-fluid img-shadow" alt="Wedding 4">
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <a href="weddings.html" class="btn btn-dark my-2">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h3 class="enfoqueFont">Family</h3>
+                    <a href="family.html" class="btn btn-dark my-2">Learn More</a>
+                    <hr>
+                    <div class="row">
+                        <!-- Añadir imágenes de familia aquí -->
+                        <div class="col-md-3 mb-4">
+                            <img src="{% static "img/familia2.png"  %}" class="img-fluid img-shadow" alt="Family 1">
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <img src="{% static "img/familia1.png"  %}" class="img-fluid img-shadow" alt="Family 2">
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <img src="{% static "img/familia4.png" %}" class="img-fluid img-shadow" alt="Family 3">
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <img src="{% static "img/familia3.png"  %}" class="img-fluid img-shadow" alt="Family 4">
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <a href="family.html" class="btn btn-dark my-2">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}
