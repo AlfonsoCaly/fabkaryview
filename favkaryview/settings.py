@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-^62c@%l69ts$*0c7p-3l=xj*ckst1*tm=a$&rgya*rgdihhzc+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['fabkaryview.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
