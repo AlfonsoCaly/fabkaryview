@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-import os
+from storages.backends.s3boto3 import S3Boto3Storage
+from decouple import config  # Si usas decouple para manejar variables de entorno
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -118,8 +119,23 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = '/static/'  # La URL para acceder a archivos estáticos
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Donde collectstatic guardará los archivos
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # Carpeta donde están tus archivos estáticos
+# Static files (CSS, JavaScript, Images)
+STATIC_URL = '/static/'
+
+# S3 Storage settings
+AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = 'favkaryview-static'  # El nombre de tu bucket
+AWS_S3_REGION_NAME = 'us-west-2'  # Cambia esto por la región de tu bucket
+AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+# Usar S3 para los archivos estáticos
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+# Opcional: Configuración para que los archivos S3 se sirvan con caché largo
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
