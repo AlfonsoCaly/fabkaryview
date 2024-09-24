@@ -79,3 +79,5 @@ def contact(request):
         form = ContactForm()
 
     return render(request, 'favkaryapp/contact.html', {'form': form})
+
+

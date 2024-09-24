@@ -1,29 +1,24 @@
-# .gitignore
-# Ignora archivos de imagen en la carpeta de estáticos
-static/img/*
+# Ignora archivos de imagen y todo el contenido en la carpeta de estáticos y media
+static/*
 media/*
 
-staticfiles
-
-# Django
+# Archivos generados automáticamente por Django
 *.log
 *.pot
 *.pyc
 __pycache__/
-db.sqlite3
-media/
+db.sqlite3  # También ignora el archivo de base de datos local
 
-# Virtual environment
+# Entornos virtuales
 .venv/
-env/
-venv/
 ENV/
 
+# Variables de entorno
 .env
 
-# VS Code and PyCharm
+# Configuración de editores de código
 .vscode/
 .idea/
 
-# Static files
+# Archivos generados por `collectstatic`
 staticfiles/
