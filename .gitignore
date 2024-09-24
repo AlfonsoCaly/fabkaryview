@@ -1,24 +1,29 @@
-# Ignora archivos de imagen y todo el contenido en la carpeta de estáticos y media
-static/*
+# Ignora archivos de imagen en la carpeta de estáticos
+favkaryapp/static/img/*
+static/img/*
 media/*
 
-# Archivos generados automáticamente por Django
+staticfiles
+
+# Django
 *.log
 *.pot
 *.pyc
 __pycache__/
-db.sqlite3  # También ignora el archivo de base de datos local
+db.sqlite3
+media/
 
-# Entornos virtuales
+# Virtual environment
 .venv/
+env/
+venv/
 ENV/
 
-# Variables de entorno
 .env
 
-# Configuración de editores de código
+# VS Code and PyCharm
 .vscode/
 .idea/
 
-# Archivos generados por `collectstatic`
+# Static files
 staticfiles/
