@@ -1,4 +1,7 @@
 # .gitignore
+# Ignora archivos de imagen en la carpeta de estáticos
+static/img/*
+media/*
 
 staticfiles
 

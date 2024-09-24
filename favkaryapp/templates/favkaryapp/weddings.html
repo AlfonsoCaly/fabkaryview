@@ -1,16 +1,15 @@
 {% extends 'favkaryapp/index.html' %}
-{% load static %} 
+{% load static %}
 
-{% block title %}lifestyle - Fab Kary View{% endblock %}
+{% block title %}Weddings - Fab Kary View{% endblock %}
 
 {% block content %}
-
  
  <!-- Portfolio Section -->
     <section id="weddings" class="py-5">
         <div class="container">
             <hr>
-            <h2 class="text-center enfoqueFont">-  Weddings  -</h2>
+            <h2 class="text-center enfoqueFont">- Weddings -</h2>
             <p class="text-center esloganFont">The magic of your wedding, narrated through captivating images</p>
             <hr>
             <div class="row">
@@ -18,31 +17,31 @@
                     <div class="row">
                         <!-- Añadir imágenes de bodas aquí -->
                         <div class="col-md-3 mb-4">
-                            <img src="{% static "img/boda3.png" %}" class="img-fluid img-shadow" alt="Boda1">
+                            <img src="{{ STATIC_URL }}img/boda3.png" class="img-fluid img-shadow" alt="Boda1">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="{% static "img/boda6.png" %}" class="img-fluid img-shadow" alt="Boda3">
+                            <img src="{{ STATIC_URL }}img/boda6.png" class="img-fluid img-shadow" alt="Boda3">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="{% static "img/boda5.png" %}" class="img-fluid img-shadow" alt="Boda4">
+                            <img src="{{ STATIC_URL }}img/boda5.png" class="img-fluid img-shadow" alt="Boda4">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="{% static "img/boda4.png" %}" class="img-fluid img-shadow" alt="Boda5">
+                            <img src="{{ STATIC_URL }}img/boda4.png" class="img-fluid img-shadow" alt="Boda5">
                         </div>
                     </div>
                     <div class="row">
                         <!-- Añadir imágenes de bodas aquí -->
                         <div class="col-md-3 mb-4">
-                            <img src="{% static "img/boda2.png" %}" class="img-fluid img-shadow" alt="Boda2">
+                            <img src="{{ STATIC_URL }}img/boda2.png" class="img-fluid img-shadow" alt="Boda2">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="{% static "img/comercial6.png" %}" class="img-fluid img-shadow" alt="Boda6">
+                            <img src="{{ STATIC_URL }}img/comercial6.png" class="img-fluid img-shadow" alt="Boda6">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="{% static "img/boda7.png" %}" class="img-fluid img-shadow" alt="Boda7">
+                            <img src="{{ STATIC_URL }}img/boda7.png" class="img-fluid img-shadow" alt="Boda7">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="{% static "img/boda3.png" %}" class="img-fluid img-shadow" alt="Boda8">
+                            <img src="{{ STATIC_URL }}img/boda3.png" class="img-fluid img-shadow" alt="Boda8">
                         </div>
                     </div>
                     <div class="text-center">
