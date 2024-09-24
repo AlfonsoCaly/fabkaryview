@@ -11,7 +11,7 @@ def index(request):
     return render(request, 'favkaryapp/index.html')
 
 def portfolio(request):
-    return render(request, 'favkaryapp/portfolio.html')
+    return render(request, 'favkaryapp/Portfolio.html')
 
 def weddings(request):
     return render(request, 'favkaryapp/weddings.html')
