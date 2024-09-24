@@ -1,5 +1,7 @@
 # .gitignore
 
+staticfiles
+
 # Django
 *.log
 *.pot
